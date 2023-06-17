@@ -1,10 +1,10 @@
 import express from "express";
 
-//import * as authorController from "../controllers/authors.js";
+import * as controller from "../controllers/index.js";
 
-export const guideRoutes = express.Router();
+export const routes = express.Router();
 
-// authorRoutes.get("/", authorController.searchAuthorsByName);
+routes.get("/", controller.searchCityByName);
 
 // authorRoutes.get("/", authorController.getAuthors);
 
