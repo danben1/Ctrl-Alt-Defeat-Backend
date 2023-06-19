@@ -4,7 +4,7 @@ import * as controller from "../controllers/index.js";
 
 export const routes = express.Router();
 
-routes.get("/", controller.searchCityByName);
+routes.get("/", controller.getGuideByLocation);
 
 // authorRoutes.get("/", authorController.getAuthors);
 

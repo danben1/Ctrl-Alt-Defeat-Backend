@@ -2,6 +2,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import { createClient } from '@supabase/supabase-js';
 
 //IMPORT ROUTES
 //import the routes from the routes folder which the api needs to listen for and what controller function to run on that route
