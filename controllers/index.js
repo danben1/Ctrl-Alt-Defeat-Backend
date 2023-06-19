@@ -1,9 +1,18 @@
-//import * as Model from "../models/index.js";
+import * as Model from "../models/index.js";
 
-export async function searchCityByName(req, res) {
+export async function getGuideByLocation(req, res) {
     const city = req.query.city;
-    res.json({ success: true, payload: city });
+    const guides = await Model.getGuideByLocation(city);
+    res.json({ success: true, payload: guides });
 }
+
+export async function getAllGuides(req, res) {
+    const guides = await Model.getGuides();
+    res.json({ success: true, payload: guides });
+}
+
+
+
 
 // export async function getAuthorById(req, res) {
 //   const author = await authorModel.getAuthorById(req.params.id);
